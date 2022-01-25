@@ -1,0 +1,19 @@
+.item {
+  color: black;
+  background-color: orange;
+  text-align: center;
+
+  width: 100%;
+  margin: 10px auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.rightMargin {
+  display: inline-block;
+  margin-left: 15px;
+}
