@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import classes from "./Alert.module.css";
 
-const Alert = ({ msg, setShowAlert, clr }) => {
+const Alert = ({ msg, setShowAlert, clr, showAlert }) => {
   useEffect(() => {
-    const timeout = setTimeout(() => {
+    return setTimeout(() => {
       setShowAlert(false);
-    }, 3000);
-    return () => clearTimeout(timeout);
-  }, [msg]); // eslint-disable-line react-hooks/exhaustive-deps
+    }, 1000);
+  });
+
   return (
     <div
       style={{ backgroundColor: clr, color: "black" }}

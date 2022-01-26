@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import classes from "../cssForPages/Form.module.css";
 import Alert from "../components/Alert";
@@ -6,10 +6,10 @@ import { useNavigate } from "react-router-dom";
 
 function Form(props) {
   const navigate = useNavigate();
-  const [isChecked, setIsChecked] = useState(false);
+
   const handleChange = (e) => {
     if (e.target.name === "teren") {
-      setIsChecked(!isChecked);
+      props.setIsChecked(!props.isChecked);
       console.log({ [e.target.name]: e.target.value });
     }
     props.setState({ ...props.state, [e.target.name]: e.target.value });
@@ -62,7 +62,7 @@ function Form(props) {
       }
     }
   };
-
+  console.log("najnovije");
   return (
     <form
       className="sirina"
@@ -117,7 +117,6 @@ function Form(props) {
       <input
         id="redovanRad"
         type="number"
-        required
         className={classes.input}
         min="0"
         step="any"
@@ -160,8 +159,8 @@ function Form(props) {
           type="checkbox"
           id="teren"
           name="teren"
+          checked={props.isChecked}
           value={true}
-          checked={isChecked}
           onChange={handleChange}
         />{" "}
         <label htmlFor="vehicle1"> Teren</label>

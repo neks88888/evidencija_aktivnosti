@@ -22,7 +22,7 @@ const DUMMY_DATA = [
     redovanRad: 15,
     prekovremeniRad: 5,
     napomena: "neka napomena1",
-    teren: true,
+    teren: false,
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const DUMMY_DATA = [
     redovanRad: 10,
     prekovremeniRad: 4,
     napomena: "neka napomena2",
-    teren: true,
+    teren: false,
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const DUMMY_DATA = [
     redovanRad: 5,
     prekovremeniRad: 3,
     napomena: "neka napomena3",
-    teren: true,
+    teren: false,
   },
 ];
 
@@ -98,6 +98,7 @@ const aktivnosti = [
 ];
 
 function App() {
+  const [isChecked, setIsChecked] = useState(false);
   let initial_state = {
     id: Math.random(),
     // datum: today,
@@ -105,10 +106,9 @@ function App() {
     aktivnosti: "",
     redovanRad: "",
     prekovremeniRad: "",
-    napomena: "neka napomena INITIAL STATE",
-    teren: "",
+    napomena: "",
+    teren: isChecked,
   };
-
   const [globalState, setGlobalState] = useState(DUMMY_DATA);
   const [isEditing, setIsEditing] = useState(false);
   const [state, setState] = useState(initial_state);
@@ -119,6 +119,7 @@ function App() {
   const [msg, setMsg] = useState("");
   const [showAlert, setShowAlert] = useState(false);
   const [clr, setClr] = useState("yellow");
+
   const navigate = useNavigate();
 
   // let specificItem = {};
@@ -233,6 +234,8 @@ function App() {
             clr={clr}
             setClr={setClr}
             initial_state={initial_state}
+            isChecked={isChecked}
+            setIsChecked={setIsChecked}
           />
         }
       />
