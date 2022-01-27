@@ -36,20 +36,31 @@ function SingleItem(props) {
       {showPopup && (
         <div onClick={() => setShowPopup(false)} className="popupBackground">
           <div className="popupWrapper">
-            <span className="bold">{datum}</span>
-            <br />
-
-            <span className="bold">Projekat:</span>
-            {aktivnost}
-            <br />
-            <span className="bold">Aktivnost:</span>
-            {aktivnosti}
-            <br />
-            <span className="bold">Redovni sati:</span>
-            <br />
-            <span className="bold">Prekovremeni sati:</span>
-            <span className="bold">Napomena:</span>
-            <button className="bold">OK</button>
+            <div>
+              <div>
+                <span className="bold datum">{datum}</span>
+              </div>
+              <div>
+                <span className="bold">Projekat:</span>{" "}
+                <span className="value"> {aktivnost}</span>
+              </div>
+              <div>
+                <span className="bold">Aktivnost:</span>{" "}
+                <span className="value"> {aktivnosti}</span>
+              </div>
+              <div>
+                <span className="bold">Redovni sati:</span>{" "}
+                <span className="value"> {redovanRad}</span>
+              </div>
+              <div>
+                <span className="bold">Prekovremeni sati:</span>{" "}
+                <span className="value"> {prekovremeniRad}</span>
+              </div>{" "}
+              <div>
+                <span className="bold">Napomena:</span>
+              </div>
+              <button className="bold ok">OK</button>
+            </div>
           </div>
         </div>
       )}

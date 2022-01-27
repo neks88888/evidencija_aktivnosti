@@ -100,9 +100,44 @@ div > i.fa-plus-circle {
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 800;
+  font-size: 1rem;
+  color: gray;
 }
 .popupWrapper {
   background-color: #fff;
-  padding: 20px;
+
+  text-align: left;
+  width: 80%;
+  height: 40%;
+  border-radius: 10px;
+  margin: 1rem, auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.datum {
+  color: #000000;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.value {
+  color: gray;
+}
+
+.popupWrapper div {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: gray;
+}
+
+.ok {
+  background-color: transparent;
+  color: gray;
+  border: none;
+  font-size: 13px;
+  text-align: right;
+  display: block;
 }
