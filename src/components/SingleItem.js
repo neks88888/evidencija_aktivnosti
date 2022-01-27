@@ -1,11 +1,28 @@
 import React, { useState, Fragment } from "react";
 import classes from "./SingleItem.module.css";
+import Popup from "./Popup";
 
 function SingleItem(props) {
   const [showPopup, setShowPopup] = useState(false);
-  const { id, aktivnost, aktivnosti, redovanRad, prekovremeniRad, datum } =
-    props.item;
-
+  const {
+    id,
+    aktivnost,
+    aktivnosti,
+    redovanRad,
+    prekovremeniRad,
+    datum,
+    napomena,
+    teren,
+  } = props.item;
+  const values = {
+    napomena,
+    aktivnost,
+    aktivnosti,
+    redovanRad,
+    prekovremeniRad,
+    datum,
+    teren,
+  };
   return (
     <Fragment>
       <li className={classes.item} onClick={() => setShowPopup(true)}>
@@ -33,37 +50,7 @@ function SingleItem(props) {
         />
         <br />
       </li>
-      {showPopup && (
-        <div onClick={() => setShowPopup(false)} className="popupBackground">
-          <div className="popupWrapper">
-            <div>
-              <div>
-                <span className="bold datum">{datum}</span>
-              </div>
-              <div>
-                <span className="bold">Projekat:</span>{" "}
-                <span className="value"> {aktivnost}</span>
-              </div>
-              <div>
-                <span className="bold">Aktivnost:</span>{" "}
-                <span className="value"> {aktivnosti}</span>
-              </div>
-              <div>
-                <span className="bold">Redovni sati:</span>{" "}
-                <span className="value"> {redovanRad}</span>
-              </div>
-              <div>
-                <span className="bold">Prekovremeni sati:</span>{" "}
-                <span className="value"> {prekovremeniRad}</span>
-              </div>{" "}
-              <div>
-                <span className="bold">Napomena:</span>
-              </div>
-              <button className="bold ok">OK</button>
-            </div>
-          </div>
-        </div>
-      )}
+      {showPopup && <Popup values={values} setShowPopup={setShowPopup} />}
     </Fragment>
   );
 }

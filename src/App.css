@@ -140,4 +140,8 @@ div > i.fa-plus-circle {
   font-size: 13px;
   text-align: right;
   display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-bottom: 15px;
 }

@@ -22,7 +22,7 @@ const DUMMY_DATA = [
     redovanRad: 15,
     prekovremeniRad: 5,
     napomena: "neka napomena1",
-    teren: false,
+    teren: "",
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const DUMMY_DATA = [
     redovanRad: 10,
     prekovremeniRad: 4,
     napomena: "neka napomena2",
-    teren: false,
+    teren: "",
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const DUMMY_DATA = [
     redovanRad: 5,
     prekovremeniRad: 3,
     napomena: "neka napomena3",
-    teren: false,
+    teren: "",
   },
 ];
 
@@ -107,7 +107,7 @@ function App() {
     redovanRad: "",
     prekovremeniRad: "",
     napomena: "",
-    teren: isChecked,
+    teren: "",
   };
   const [globalState, setGlobalState] = useState(DUMMY_DATA);
   const [isEditing, setIsEditing] = useState(false);

@@ -10,7 +10,7 @@ function Form(props) {
   const handleChange = (e) => {
     if (e.target.name === "teren") {
       props.setIsChecked(!props.isChecked);
-      console.log({ [e.target.name]: e.target.value });
+      // console.log({ [e.target.name]: e.target.value });
     }
     props.setState({ ...props.state, [e.target.name]: e.target.value });
   };
@@ -159,7 +159,7 @@ function Form(props) {
           type="checkbox"
           id="teren"
           name="teren"
-          checked={props.isChecked}
+          checked={props.state.teren ? true : false}
           value={true}
           onChange={handleChange}
         />{" "}
