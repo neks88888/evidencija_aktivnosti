@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import classes from "./Alert.module.css";
 
-const Alert = ({ msg, setShowAlert, clr, showAlert }) => {
+const Alert = ({ msg, setShowAlert, clr }) => {
   useEffect(() => {
     return setTimeout(() => {
       setShowAlert(false);

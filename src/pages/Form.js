@@ -178,6 +178,7 @@ function Form(props) {
           msg={props.msg}
           setShowAlert={props.setShowAlert}
           clr={props.clr}
+          gir
         />
       )}
     </form>
