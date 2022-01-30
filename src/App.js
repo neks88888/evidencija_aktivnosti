@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 
 import List from "./pages/List";
 import Missing from "./pages/Missing";
-
+console.log("sa laptopa")
 const d = new Date().now;
 const ye = new Intl.DateTimeFormat("en", { year: "numeric" }).format(d);
 const mo = new Intl.DateTimeFormat("en", { month: "2-digit" }).format(d);
